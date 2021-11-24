@@ -19,7 +19,7 @@ public class Curso{
     // 3.2 - Métodos e Funções
     @Before
     public void iniciar(){
-        System.setProperty("webdriver.chrome.driver", "drivers/chrome/91/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "drivers/chrome/96/chromedriver.exe");
         driver = new ChromeDriver(); // Instanciou o Selenium como Chrome
         driver.manage().window().maximize(); // Maximizar a janela do navegador
         driver.manage().timeouts().implicitlyWait(60000, TimeUnit.MILLISECONDS);
@@ -46,7 +46,7 @@ public class Curso{
 
         // Página de Detalhes do Produto
         assertEquals("Mantis", driver.findElement(By.cssSelector("span.item-title")).getText());
-        assertEquals("R$ 49,99", driver.findElement(By.cssSelector("span.new-price")).getText());
+        assertEquals("R$ 59,99", driver.findElement(By.cssSelector("span.new-price")).getText());
 
     }
 
